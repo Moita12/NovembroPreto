@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    font-family: Arial, sans-serif;
+    background-image: url("./imagens/fundo2.jpg");
+    animation: scroll 800s linear infinite;
+}
+
+.menu{
+    padding: 50px 0;
+    display: grid;
+    place-items: center;        /* Centraliza o conteúdo dentro da div */
+    height: 100%;              /* Ocupa 100% da altura da viewport */
+    width: 90%;                 /* Define 80% da largura da tela */
+    background: linear-gradient(rgba(0, 0, 0, 0.345) 0%, rgb(255, 255, 255) 100%);
+    margin: 0 auto;   
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.50);
+    animation: scroll 800s linear infinite;
+}
+
+
+
+header, #about, #inspiration, footer {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #444;
+    margin-bottom: 0.3em;
+}
+
+section {
+    margin: 20px 0;
+}
+
+#quote-carousel {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+.animated-image {
+    width: 375px;
+    animation: moveUpDown 3s infinite ease-in-out;
+    -webkit-animation: moveUpDown 3s infinite ease-in-out; /* Prefixo WebKit */
+    margin-top: 50px;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Posição inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Move 20px para cima */
+    }
+}
+
+@-webkit-keyframes moveUpDown {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+.center{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sombra{
+    box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    min-width: 100%;
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Adicionar espaço no topo das seções para compensar o header fixo */
+#about, #inspiration {
+    margin-top: 80px; /* Ajuste conforme a altura do header */
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    min-width: 100%;
+    
+}
+
+nav ul li {
+    display: inline;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
